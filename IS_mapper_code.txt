@@ -1,0 +1,18 @@
+ismap –cutoff 1 --reads *.fastq --queries is.fasta--reference mtb_h37rv_db.gb --output_dir resultados_ISMapper/
+cd resultados_ISMapper/
+
+
+cp 20ID00937_S7/seq_27237/20ID00937_S7__NC_000962.3_table.txt .
+cp 20ID00938_S8/seq_27237/20ID00938_S8__NC_000962.3_table.txt .
+cp 20ID00939_S9/seq_27237/20ID00939_S9__NC_000962.3_table.txt .
+cp 20ID00940_S10/seq_27237/20ID00940_S10__NC_000962.3_table.txt .
+cp 20ID00941_S11/seq_27237/20ID00941_S11__NC_000962.3_table.txt .
+cp 20ID00942_S12/seq_27237/20ID00942_S12__NC_000962.3_table.txt .
+cp HMS23011_S8/seq_27237/HMS23011_S8__NC_000962.3_table.txt .
+cp HMS23014_S9/seq_27237/HMS23014_S9__NC_000962.3_table.txt .
+cp HMS23023_S34/seq_27237/HMS23023_S34__NC_000962.3_table.txt .
+cp HCU23002_S24/seq_27237/HCU23002_S24__NC_000962.3_table.txt .
+cp HCU23007_S26/seq_27237/HCU23007_S26__NC_000962.3_table.txt .
+
+
+compiled_table.py --tables 20ID00937_S7__NC_000962.3_table.txt 20ID00938_S8__NC_000962.3_table.txt 20ID00939_S9__NC_000962.3_table.txt 20ID00940_S10__NC_000962.3_table.txt 20ID00941_S11__NC_000962.3_table.txt 20ID00942_S12__NC_000962.3_table.txt HMS23011_S8__NC_000962.3_table.txt HMS23014_S9__NC_000962.3_table.txt HMS23023_S34__NC_000962.3_table.txt HCU23002_S24__NC_000962.3_table.txt HCU23007_S26__NC_000962.3_table.txt --reference ../genomeh37rv.gb --query ../is.fasta --out_prefix res
